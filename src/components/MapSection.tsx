@@ -1,29 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-// Fix Leaflet marker icon
-interface IconDefaultWithGetIconUrl extends L.Icon.Default {
-  _getIconUrl?: () => string;
-}
-
-delete (L.Icon.Default.prototype as IconDefaultWithGetIconUrl)._getIconUrl;
-
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl:
-    "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
-  iconUrl:
-    "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
-  shadowUrl:
-    "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
-});
-
 const guestHouseCoords: [number, number] = [26.757771, 82.128427];
 
 const LocationMap = () => {
+  useEffect(() => {
+    delete (L.Icon.Default.prototype as any)._getIconUrl;
+
+    L.Icon.Default.mergeOptions({
+      iconRetinaUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
+      iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
+      shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
+    });
+  }, []);
+
   return (
     <div className="h-[500px] w-full">
       <MapContainer
