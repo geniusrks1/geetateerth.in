@@ -105,19 +105,25 @@ const sacredPlaces = [
 
 const SacredPlaces: React.FC = () => {
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-6">Sacred Places in Ayodhya</h1>
+    <div className="p-6 bg-[#FFF8E7] min-h-screen">
+      <h1 className="text-3xl font-extrabold text-center mb-6 text-orange-600 underline underline-offset-4 decoration-yellow-400">
+        🛕 Sacred Places in Ayodhya
+      </h1>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sacredPlaces.map((place, index) => (
-          <div key={index} className="shadow-lg rounded-lg overflow-hidden bg-white">
+          <div
+            key={index}
+            className="shadow-lg hover:shadow-orange-200 transition duration-300 rounded-xl overflow-hidden bg-white border border-yellow-100"
+          >
             <img
               src={place.imageUrl}
               alt={place.name}
               className="w-full h-40 object-cover"
             />
             <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{place.name}</h2>
-              <p className="text-gray-600">{place.description}</p>
+              <h2 className="text-xl font-bold text-red-800 mb-2">{place.name}</h2>
+              <p className="text-gray-700">{place.description}</p>
             </div>
           </div>
         ))}
@@ -127,6 +133,8 @@ const SacredPlaces: React.FC = () => {
 };
 
 export default SacredPlaces;
+
+
 
 
 

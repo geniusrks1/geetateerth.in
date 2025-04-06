@@ -3,7 +3,7 @@
 import React from "react";
 
 const rooms = [
-  {id: 1, type: "Single Room with Fan Only", person: "for 1 person", price: "₹400/night" },
+  { id: 1, type: "Single Room with Fan Only", person: "for 1 person", price: "₹400/night" },
   { id: 2, type: "Single Room with Cooler", person: "for 1 person", price: "₹500/night" },
   { id: 5, type: "Double Bed with Fan", person: "for 2 persons", price: "₹600/night" },
   { id: 3, type: "Double Room with Cooler", person: "for 2 persons", price: "₹800/night" },
@@ -14,19 +14,19 @@ const rooms = [
 
 const RoomsSection: React.FC = () => {
   return (
-    <section className="mb-12 px-4">
-      <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
-        Our Rooms
+    <section id="rooms"  className="mb-12 px-4 py-10 bg-[#FFF8E7]">
+      <h2 className="text-3xl font-extrabold text-center mb-8 text-orange-600 tracking-wide underline underline-offset-4 decoration-yellow-400">
+        🚩 Our Rooms at Shri Ram Dham
       </h2>
-      <ul className="max-w-3xl mx-auto space-y-2">
+      <ul className="max-w-4xl mx-auto space-y-4">
         {rooms.map((room) => (
           <li
             key={room.id}
-            className="flex items-center justify-between bg-white border border-gray-200 px-4 py-3 rounded-md shadow-sm"
+            className="flex flex-col lg:flex-row lg:items-center bg-white border border-yellow-200 px-4 py-4 rounded-xl shadow-lg shadow-orange-100 hover:shadow-orange-200 transition duration-300 space-y-2 lg:space-y-0 lg:space-x-4"
           >
-            <span className="w-1/2 text-left text-gray-800">{room.type}</span>
-            <span className="w-1/4 text-center text-gray-600">{room.person}</span>
-            <span className="w-1/4 text-right text-gray-900 font-semibold">{room.price}</span>
+            <span className="text-base font-semibold text-red-800 lg:w-1/2">{room.type}</span>
+            <span className="text-sm text-gray-700 lg:w-1/4 lg:text-center">{room.person}</span>
+            <span className="text-sm text-orange-600 font-bold lg:w-1/4 lg:text-right">{room.price}</span>
           </li>
         ))}
       </ul>

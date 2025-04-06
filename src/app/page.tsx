@@ -8,6 +8,8 @@ import RoomsSection from "@/components/RoomsSection";
 import SightseeingSection from "@/components/SightseeingSection";
 import TransportSection from "@/components/TransportSection";
 import ActionButtons from "@/components/ActionButtons";
+import ContactSection from "@/components/ContactSection";
+import GT_TourAndTravel from "@/components/GT_TourAndTravel";
 
 //import SacredPlaces from "@/components/SacredPlaces";
 
@@ -23,11 +25,13 @@ const Home: React.FC = () => {
     <div className="bg-gray-100 min-h-screen">
       <main className="max-w-7xl mx-auto py-8 px-4">
         <RoomsSection />
-       <SacredPlaces/>
+        <GT_TourAndTravel/>
         <SightseeingSection />
         <TransportSection />
         <MapSection />
         <ActionButtons /> 
+        <ContactSection/>
+        <SacredPlaces/>
       </main>
     </div>
     <Footer />
