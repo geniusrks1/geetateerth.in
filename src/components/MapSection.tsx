@@ -6,7 +6,12 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
 // Fix Leaflet marker icon
-delete (L.Icon.Default.prototype as any)._getIconUrl;
+interface IconDefaultWithGetIconUrl extends L.Icon.Default {
+  _getIconUrl?: () => string;
+}
+
+delete (L.Icon.Default.prototype as IconDefaultWithGetIconUrl)._getIconUrl;
+
 L.Icon.Default.mergeOptions({
   iconRetinaUrl:
     "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
