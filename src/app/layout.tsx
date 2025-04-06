@@ -3,7 +3,6 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import "leaflet/dist/leaflet.css";
 
-
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
@@ -46,14 +45,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Define viewport and themeColor separately
-export const generateViewport = () => ({
-  width: "device-width",
-  initialScale: 1.0,
-});
-
-export const generateThemeColor = () => "#ffffff";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,13 +52,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body className={poppins.className}>
-        <main className="font-normal">
-        
-          {children}
-       
-        </main>
+        <main className="font-normal">{children}</main>
       </body>
     </html>
   );
