@@ -2,6 +2,7 @@
 
 import React from "react";
 
+
 const Navbar: React.FC = () => {
   return (
     <header className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 text-white shadow-lg">
