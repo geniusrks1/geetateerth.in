@@ -14,12 +14,12 @@ const sightseeing = [
 ];
 
 const SightseeingSection: React.FC = () => {
-  const [selectedPlace, setSelectedPlace] = useState<string | null>(null);
+  // const [selectedPlace, setSelectedPlace] = useState<string | null>(null);
 
-  const handlePlaceClick = (place: string) => {
-    setSelectedPlace(place);
+  // const handlePlaceClick = (place: string) => {
+  //   setSelectedPlace(place);
   
-  };
+  // };
 
   return (
     <section className="mb-12">
@@ -31,7 +31,7 @@ const SightseeingSection: React.FC = () => {
           <li
             key={index}
             className="cursor-pointer text-blue-600 hover:underline"
-            onClick={() => handlePlaceClick(place)}
+            // onClick={() => handlePlaceClick(place)}
           >
             {index + 1}. {place}
           </li>
