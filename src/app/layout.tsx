@@ -1,30 +1,27 @@
 import type { Metadata } from "next";
-
-import { Poppins } from 'next/font/google';
+import { Poppins } from "next/font/google";
 import "./globals.css";
-
-
+import "leaflet/dist/leaflet.css";
 
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '700', '900'],
-  style: ['italic', 'normal'],
-  variable: '--font-poppins',
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+  style: ["italic", "normal"],
+  variable: "--font-poppins",
 });
-
-
 
 export const metadata: Metadata = {
   title: "Geeta Teerth Guest House | Affordable Stay in Ayodhya",
-  description: "Book affordable rooms at Geeta Teerth Guest House, located near Shri Ram Bhoomi in Ayodhya. Available on Airbnb, Booking.com, and more.",
-  keywords: "Geeta Teerth Guest House, Ayodhya stay, Airbnb Ayodhya, Booking.com Ayodhya, TripAdvisor guest house, affordable rooms in Ayodhya",
+  description:
+    "Book affordable rooms at Geeta Teerth Guest House, located near Shri Ram Bhoomi in Ayodhya. Available on Airbnb, Booking.com, and more.",
+  keywords:
+    "Geeta Teerth Guest House, Ayodhya stay, Airbnb Ayodhya, Booking.com Ayodhya, TripAdvisor guest house, affordable rooms in Ayodhya",
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
-  themeColor: "#ffffff",
   openGraph: {
     title: "Geeta Teerth Guest House | Affordable Stay in Ayodhya",
-    description: "Book your stay at Geeta Teerth Guest House, listed on justdial.com, Booking.com, and easemytrip. Comfort and affordability near Shri Ram Bhoomi.",
+    description:
+      "Book your stay at Geeta Teerth Guest House, listed on justdial.com, Booking.com, and easemytrip. Comfort and affordability near Shri Ram Bhoomi.",
     url: "https://www.geetateerthguesthouse.com",
     siteName: "Geeta Teerth Guest House",
     images: [
@@ -41,11 +38,21 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Geeta Teerth Guest House | Affordable Stay in Ayodhya",
-    description: "Comfortable and affordable rooms near Shri Ram Bhoomi in Ayodhya. Available on Airbnb, Booking.com, and TripAdvisor.",
-    images: ["https://images.jdmagicbox.com/v2/comp/ayodhya/k3/9999p5278.5278.250106133046.r5k3/catalogue/atc6ujlwewcngs2-hi6q1fkbau.jpg"],
+    description:
+      "Comfortable and affordable rooms near Shri Ram Bhoomi in Ayodhya. Available on Airbnb, Booking.com, and TripAdvisor.",
+    images: [
+      "https://images.jdmagicbox.com/v2/comp/ayodhya/k3/9999p5278.5278.250106133046.r5k3/catalogue/atc6ujlwewcngs2-hi6q1fkbau.jpg",
+    ],
   },
 };
 
+// Define viewport and themeColor separately
+export const generateViewport = () => ({
+  width: "device-width",
+  initialScale: 1.0,
+});
+
+export const generateThemeColor = () => "#ffffff";
 
 export default function RootLayout({
   children,
@@ -54,17 +61,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-
-      </head>
-    <body className={poppins.className}>
+      <head></head>
+      <body className={poppins.className}>
+        <main className="font-normal">
         
-            <main className='font-normal'>
-           
-              {children}
-             
-            </main>
-        
+          {children}
+       
+        </main>
       </body>
     </html>
   );
