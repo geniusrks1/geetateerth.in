@@ -5,7 +5,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-const guestHouseCoords: [number, number] = [26.757771, 82.128427];
+const guestHouseCoords: [number, number] = [26.757655, 82.128452];
 
 const LocationMap = () => {
   interface IconDefaultWithGetIconUrl extends L.Icon.Default {
@@ -48,7 +48,7 @@ const LocationMap = () => {
                 Lucknow Highway, Opp. Kaushalpuri Colony<br />
                 Near RTO Office, Ayodhya<br />
                 <a
-                  href="https://www.google.com/maps?q=26.757771,82.128427"
+                  href="https://www.google.com/maps?q=26.757655,82.128452"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 underline"
