@@ -177,8 +177,7 @@ const GT_TourAndTravel: React.FC = () => {
                 </button>
 
         <p className="text-lg text-gray-700 mb-4">
-          Can't find your ideal package? We offer custom spiritual tours.
-        </p>
+        Can&apos;t find your ideal package? We offer custom spiritual tours.</p>
         <Link
           href="#contact"
           className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg text-lg shadow-md"

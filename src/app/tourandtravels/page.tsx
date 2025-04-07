@@ -84,7 +84,8 @@ const TourAndTravelsPage: React.FC = () => {
 
       <div className="mt-16 text-center">
   <p className="text-lg text-gray-700 mb-4">
-    Can't find your ideal package? We offer custom religious tours.
+  <p>Can&rsquo;t find your ideal package? We offer custom religious tours.</p>
+
   </p>
   <a
     href="tel:7007814974"

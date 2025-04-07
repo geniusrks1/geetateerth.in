@@ -10,7 +10,10 @@ const Footer: React.FC = () => {
           <span className="text-2xl mr-2">🛕</span>
           <h2 className="text-xl font-bold tracking-wider">Geeta Teerth Guest House</h2>
         </div>
-        <p className="text-sm italic mb-1">"In the heart of Ayodhya, where divinity meets hospitality."</p>
+        <p className="text-sm italic mb-1">
+        &ldquo;In the heart of Ayodhya, where divinity meets hospitality.&rdquo;</p>
+
+          
         <p className="text-sm">© {new Date().getFullYear()} All Rights Reserved | Jai Shri Ram 🚩</p>
       </div>
     </footer>
