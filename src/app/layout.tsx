@@ -115,12 +115,12 @@ const jsonLd = {
       "sameAs": [
         "https://www.facebook.com/people/Geeta-Teerth-Guest-House-Ayodhya/61573535986367/",
         "https://www.instagram.com/geetateerth",
-        "https://www.google.com/maps?q=26.757771,82.128427"
+        "https://www.google.com/maps?q=26.757655,82.128452"
       ]
     },
     {
       "@type": "Hotel",
-      "@id": "https://www.geetateerthguesthouse.com#hotel",
+      "@id": "https://www.geetateerth.in#rooms",
       "name": "Geeta Teerth Guest House",
       "starRating": {
         "@type": "Rating",
@@ -143,7 +143,7 @@ const jsonLd = {
     },
     {
       "@type": "Place",
-      "@id": "https://www.geetateerthguesthouse.com#place",
+      "@id": "https://www.geetateerth.in#place",
       "name": "Geeta Teerth Guest House",
       "geo": {
         "@type": "GeoCoordinates",
@@ -161,7 +161,7 @@ const jsonLd = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.geetateerthguesthouse.com#faq",
+      "@id": "https://www.geetateerth.in#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -196,7 +196,22 @@ const jsonLd = {
           }
         }
       ]
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.geetateerth.in#organization",
+      "name": "Geeta Teerth Guest House",
+      "url": "https://www.geetateerth.in",
+      "logo": "https://www.geetateerth.in/images/geetateerth.png",
+      "sameAs": [
+        "https://www.facebook.com/people/Geeta-Teerth-Guest-House-Ayodhya/61573535986367/",
+        "https://www.instagram.com/geetateerth"
+      ]
     }
+    
+
+
   ]
 };
 
