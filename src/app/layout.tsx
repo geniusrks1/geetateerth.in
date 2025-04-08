@@ -203,7 +203,7 @@ const jsonLd = {
       "@id": "https://www.geetateerth.in#organization",
       "name": "Geeta Teerth Guest House",
       "url": "https://www.geetateerth.in",
-      "logo": "https://www.geetateerth.in/images/geetateerth.png",
+      "logo": "https://www.geetateerth.in/images/geetateerth.webp",
       "sameAs": [
         "https://www.facebook.com/people/Geeta-Teerth-Guest-House-Ayodhya/61573535986367/",
         "https://www.instagram.com/geetateerth"
@@ -227,7 +227,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="theme-color" content="#ffffff" />
-        <link rel="icon" href="/images/geetateerth.png" type="image/png" />
+        <link rel="icon" href="/images/geetateerth.webp" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
