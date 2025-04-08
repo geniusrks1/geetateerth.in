@@ -17,15 +17,15 @@ export const metadata: Metadata = {
   keywords:
     "Geeta Teerth Guest House, Ayodhya stay, AC rooms in Ayodhya, book room near Ram Mandir, sacred guest house Ayodhya, Kashi tour package, Varanasi spiritual tour, Prayagraj pilgrimage, Vrindavan Krishna tour, Gaya Vishnupad temple, Jai Shree Ram stay, Ayodhya temple rooms, spiritual stay near Ram Mandir, budget hotels Ayodhya, Ayodhya darshan trip, religious stay Uttar Pradesh",
   robots: "index, follow",
-  metadataBase: new URL("https://www.geetateerthguesthouse.com"),
+  metadataBase: new URL("https://www.geetateerth.in"),
   alternates: {
-    canonical: "https://www.geetateerthguesthouse.com",
+    canonical: "https://www.geetateerth.in",
   },
   openGraph: {
     title: "Book Sacred Stay in Ayodhya | Geeta Teerth Guest House & Pilgrimage Tours",
     description:
       "Comfortable AC rooms near Ram Mandir at Geeta Teerth Guest House, Ayodhya. Explore spiritual tour packages to Kashi, Prayagraj, Vrindavan, and Gaya. Ideal for families and pilgrims.",
-    url: "https://www.geetateerthguesthouse.com",
+    url: "https://www.geetateerth.in",
     siteName: "Geeta Teerth Guest House",
     images: [
       {
