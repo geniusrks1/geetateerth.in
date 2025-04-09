@@ -45,7 +45,8 @@ export const metadata: Metadata = {
       "Affordable rooms near Shri Ram Janmabhoomi with spiritual tour packages to Varanasi, Prayagraj, Gaya & Vrindavan. Perfect for religious travelers. Book now!",
     images: [
       "https://images.jdmagicbox.com/v2/comp/ayodhya/k3/9999p5278.5278.250106133046.r5k3/catalogue/atc6ujlwewcngs2-hi6q1fkbau.jpg",
-    ],
+    ]
+
   },
 };
 
@@ -53,19 +54,25 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
-      "@id": "https://www.geetateerthguesthouse.com#localbusiness",
+      "@type": ["LocalBusiness", "Hotel","LodgingBusiness"],
+      "@id": "https://www.geetateerth.in#localbusiness",
       "name": "Geeta Teerth Guest House & Tours",
       "description": "Affordable AC rooms near Shri Ram Janmabhoomi in Ayodhya and sacred tour packages to Kashi, Varanasi, Prayagraj, Vrindavan, and Gaya.",
-      "image": "https://images.jdmagicbox.com/v2/comp/ayodhya/k3/9999p5278.5278.250106133046.r5k3/catalogue/atc6ujlwewcngs2-hi6q1fkbau.jpg",
-      "url": "https://www.geetateerthguesthouse.com",
+      "image": {
+  "@type": "ImageObject",
+  "url": "https://images.jdmagicbox.com/v2/comp/ayodhya/k3/9999p5278.5278.250106133046.r5k3/catalogue/atc6ujlwewcngs2-hi6q1fkbau.jpg",
+  "height": 630,
+  "width": 1200
+},
+     
+      "url": "https://www.geetateerth.in",
       "telephone": "+91-7007814974",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Lucknow Highway near Rto Office Transport Nagar",
         "addressLocality": "Ayodhya",
         "addressRegion": "Uttar Pradesh",
-        "postalCode": "224123",
+        "postalCode": "224001",
         "addressCountry": "IN"
       },
       "geo": {
@@ -116,15 +123,37 @@ const jsonLd = {
         "https://www.facebook.com/people/Geeta-Teerth-Guest-House-Ayodhya/61573535986367/",
         "https://www.instagram.com/geetateerth",
         "https://www.google.com/maps?q=26.757655,82.128452"
-      ]
+      ],
+
+"potentialAction": {
+  "@type": "ReserveAction",
+  "target": {
+    "@type": "EntryPoint",
+    "urlTemplate": "https://www.geetateerth.in/book-now",
+    "inLanguage": "en"
+  },
+  "result": {
+    "@type": "LodgingReservation",
+    "name": "AC Room Booking at Geeta Teerth"
+  }
+}
+,
+"currenciesAccepted": "INR",
+"paymentAccepted": "Cash, UPI, Netbanking",
+"priceRange": "₹400 - ₹3000",
+"checkinTime": "00:00",
+"checkoutTime": "11:00",
+"availableLanguage": ["Hindi", "English"],
+
     },
     {
       "@type": "Hotel",
       "@id": "https://www.geetateerth.in#rooms",
       "name": "Geeta Teerth Guest House",
+      "numberOfRooms": 18,
       "starRating": {
         "@type": "Rating",
-        "ratingValue": "3",
+        "ratingValue": "5",
         "bestRating": "5"
       },
       "address": {
@@ -132,19 +161,32 @@ const jsonLd = {
         "streetAddress": "Lucknow Highway near RTO Office Transport Nagar",
         "addressLocality": "Ayodhya",
         "addressRegion": "Uttar Pradesh",
-        "postalCode": "224123",
+        "postalCode": "224001",
         "addressCountry": "IN"
       },
+
+      "hasMap": "https://www.google.com/maps?q=26.757655,82.128452"
+,
       "telephone": "+91-7007814974",
       "amenityFeature": [
         { "@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Couple Friendly", "value": true }
-      ]
+      ],
+     "currenciesAccepted": "INR",
+"paymentAccepted": "Cash, UPI, Netbanking",
+"priceRange": "₹400 - ₹3000",
+"checkinTime": "00:00",
+"checkoutTime": "11:00",
+"availableLanguage": ["Hindi", "English"],
+
+
     },
     {
       "@type": "Place",
       "@id": "https://www.geetateerth.in#place",
       "name": "Geeta Teerth Guest House",
+      "hasMap": "https://www.google.com/maps?q=26.757655,82.128452",
+
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 26.757655,
@@ -155,13 +197,15 @@ const jsonLd = {
         "streetAddress": "Lucknow Highway near RTO Office Transport Nagar",
         "addressLocality": "Ayodhya",
         "addressRegion": "Uttar Pradesh",
-        "postalCode": "224123",
+        "postalCode": "224001",
         "addressCountry": "IN"
       }
     },
     {
+
       "@type": "FAQPage",
       "@id": "https://www.geetateerth.in#faq",
+      "name": "Frequently Asked Questions about Geeta Teerth Guest House",
       "mainEntity": [
         {
           "@type": "Question",
@@ -209,6 +253,19 @@ const jsonLd = {
         "https://www.instagram.com/geetateerth"
       ]
     }
+    ,
+
+    {
+      "@type": "WebSite",
+      "@id": "https://www.geetateerth.in#website",
+      "url": "https://www.geetateerth.in",
+      "name": "Geeta Teerth Guest House & Tours",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.geetateerth.in/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
     
 
 
@@ -228,6 +285,13 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#ffffff" />
         <link rel="icon" href="/images/geetateerth.webp" type="image/png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+<meta name="twitter:image:alt" content="Spiritual guest house in Ayodhya near Ram Mandir with AC rooms" />
+<meta property="og:image:alt" content="Geeta Teerth Guest House near Ram Janmabhoomi Ayodhya" />
+<meta name="twitter:site" content="@geetateerth" />
+<meta name="twitter:creator" content="@geetateerth_rk" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
