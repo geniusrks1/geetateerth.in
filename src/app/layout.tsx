@@ -284,7 +284,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="theme-color" content="#ffffff" />
-        <link rel="icon" href="/images/geetateerth.webp" type="image/png" />
+        <link rel="icon" href="/images/geetateerth.webp" type="image/webp" />
+        <link rel="icon" href="/favicon.ico" />
+   <link rel="icon" type="image/png" sizes="32x32" href="/images/geetateerth.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/appletouch.png" />
+
+
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
   
 <meta name="twitter:image:alt" content="Spiritual guest house in Ayodhya near Ram Mandir with AC rooms" />
