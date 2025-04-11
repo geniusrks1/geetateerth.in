@@ -1,3 +1,7 @@
+
+
+
+
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -36,7 +40,8 @@ export const metadata: Metadata = {
       },
     ],
     locale: "en_US",
-    type: "website",
+    type: "website"
+
   },
   twitter: {
     card: "summary_large_image",
@@ -45,10 +50,13 @@ export const metadata: Metadata = {
       "Affordable rooms near Shri Ram Janmabhoomi with spiritual tour packages to Varanasi, Prayagraj, Gaya & Vrindavan. Perfect for religious travelers. Book now!",
     images: [
       "https://images.jdmagicbox.com/v2/comp/ayodhya/k3/9999p5278.5278.250106133046.r5k3/catalogue/atc6ujlwewcngs2-hi6q1fkbau.jpg",
-    ]
-
+    ],
+    site: "@geetateerth",
+    creator: "@geetateerth_rk",
   },
 };
+
+
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -62,9 +70,10 @@ const jsonLd = {
   "@type": "ImageObject",
   "url": "https://images.jdmagicbox.com/v2/comp/ayodhya/k3/9999p5278.5278.250106133046.r5k3/catalogue/atc6ujlwewcngs2-hi6q1fkbau.jpg",
   "height": 630,
-  "width": 1200
+  "width": 1200,
+  
 },
-     
+     "hasMap": "https://www.google.com/maps?q=26.757655,82.128452",
       "url": "https://www.geetateerth.in",
       "telephone": "+91-7007814974",
       "address": {
@@ -178,6 +187,10 @@ const jsonLd = {
 "checkinTime": "00:00",
 "checkoutTime": "11:00",
 "availableLanguage": ["Hindi", "English"],
+"mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://www.geetateerth.in"
+}
 
 
     },
@@ -247,13 +260,32 @@ const jsonLd = {
       "@id": "https://www.geetateerth.in#organization",
       "name": "Geeta Teerth Guest House",
       "url": "https://www.geetateerth.in",
-      "logo": "https://www.geetateerth.in/images/geetateerth.webp",
+      "logo":  "https://www.geetateerth.in/images/geetateerth.png",
       "sameAs": [
         "https://www.facebook.com/people/Geeta-Teerth-Guest-House-Ayodhya/61573535986367/",
         "https://www.instagram.com/geetateerth"
       ]
+      ,
+      "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://www.geetateerth.in"
+}
+
     }
     ,
+    {
+      "publisher": {
+        "@type": "Organization",
+        "name": "Geeta Teerth Guest House",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.geetateerth.in/images/geetateerth.png"
+        }
+      }
+    }
+,    
+
+
 
     {
       "@type": "WebSite",
@@ -275,40 +307,49 @@ const jsonLd = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.variable}>
       <head>
+        <meta charSet="utf-8" />
         <meta name="theme-color" content="#ffffff" />
-        <link rel="icon" href="/images/geetateerth.webp" type="image/webp" />
-        <link rel="icon" href="/favicon.ico" />
-   <link rel="icon" type="image/png" sizes="32x32" href="/images/geetateerth.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/images/appletouch.png" />
-
-
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-<meta name="twitter:image:alt" content="Spiritual guest house in Ayodhya near Ram Mandir with AC rooms" />
-<meta property="og:image:alt" content="Geeta Teerth Guest House near Ram Janmabhoomi Ayodhya" />
-<meta name="twitter:site" content="@geetateerth" />
-<meta name="twitter:creator" content="@geetateerth_rk" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
 
 
-        
+        <link rel="icon" type="image/png" href="/images/geetateerth.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/appletouch.png" />
+
+        {/* Twitter and OG image alt text for accessibility */}
+        <meta name="twitter:image:alt" content="Spiritual guest house in Ayodhya near Ram Mandir with AC rooms" />
+        <meta property="og:image:alt" content="Geeta Teerth Guest House near Ram Janmabhoomi Ayodhya" />
+
+    
       </head>
-      <body className={poppins.className}>
-        <main className="font-normal">{children}</main>
-      </body>
+      <body className="font-normal">
+  <main>{children}</main>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+  />
+</body>
+
     </html>
   );
 }
