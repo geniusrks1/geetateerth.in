@@ -328,9 +328,10 @@ export default function RootLayout({
   <link rel="preload" href="..." as="font" type="font/woff2" crossOrigin="anonymous" />
 
   <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-  ></script>
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        
 </head>
 
       <body className="font-normal">
