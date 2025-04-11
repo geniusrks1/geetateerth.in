@@ -307,17 +307,6 @@ const jsonLd = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 export default function RootLayout({
   children,
 }: {
@@ -325,23 +314,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={poppins.variable}>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
+   <head>
+  <meta charSet="utf-8" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="twitter:image:alt" content="Spiritual guest house in Ayodhya near Ram Mandir with AC rooms" />
+  <meta property="og:image:alt" content="Geeta Teerth Guest House near Ram Janmabhoomi Ayodhya" />
 
+  <link rel="icon" href="/images/geetateerth.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/appletouch.png" />
+  <link rel="preload" href="..." as="font" type="font/woff2" crossOrigin="anonymous" />
 
-        <link rel="icon" type="image/png" href="/images/geetateerth.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/appletouch.png" />
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+  ></script>
+</head>
 
-        {/* Twitter and OG image alt text for accessibility */}
-        <meta name="twitter:image:alt" content="Spiritual guest house in Ayodhya near Ram Mandir with AC rooms" />
-        <meta property="og:image:alt" content="Geeta Teerth Guest House near Ram Janmabhoomi Ayodhya" />
-
-    
-      </head>
       <body className="font-normal">
   <main>{children}</main>
   <script
