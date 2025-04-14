@@ -16,7 +16,7 @@ const ActionButtons: React.FC = () => {
         <ChatBubbleLeftIcon className="w-6 h-6" /> WhatsApp
       </a>
       <a
-        href="tel:+7007814974"
+        href="tel:7007814974"
         className="bg-blue-500 text-white p-4 rounded-full shadow hover:bg-blue-600 flex items-center gap-2"
       >
         <PhoneIcon className="w-6 h-6" /> Call Us
