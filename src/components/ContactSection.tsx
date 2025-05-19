@@ -24,23 +24,27 @@ const ContactSection: React.FC = () => {
             </p>
           </div>
           <div className="flex items-start sm:items-center space-x-3 flex-wrap">
-            <PhoneCall className="text-orange-600 shrink-0 mt-1 sm:mt-0" />
-            <p>
-              <span className="font-semibold">Phone:</span>
-              <a
-                href="tel:7007814974"
-                className="underline hover:text-orange-700 ml-1 block sm:inline"
-              >
-                7007814974
-              </a>
-              <a
-                href="tel:9454399517"
-                className="underline hover:text-orange-700 ml-1 block sm:inline"
-              >
-                9454399517
-              </a>
-            </p>
-          </div>
+  <PhoneCall className="text-orange-600 shrink-0 mt-1 sm:mt-0" />
+  <p>
+    <span className="font-semibold">Phone:</span>
+    <span className="ml-1">
+      <a
+        href="tel:7007814974"
+        className="underline hover:text-orange-700"
+      >
+        7007814974
+      </a>
+      <span className="mx-1 text-gray-500"> | </span>
+      <a
+        href="tel:9454399517"
+        className="underline hover:text-orange-700"
+      >
+        9454399517
+      </a>
+    </span>
+  </p>
+</div>
+
         </div>
 
         {/* Email */}
