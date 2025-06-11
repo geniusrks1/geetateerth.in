@@ -324,7 +324,7 @@ export default function RootLayout({
   <meta property="og:image:alt" content="Geeta Teerth Guest House near Ram Janmabhoomi Ayodhya" />
 
   <link rel="icon" href="/images/geetateerth.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/appletouch.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/geetateerth.png" />
   <link rel="preload" href="..." as="font" type="font/woff2" crossOrigin="anonymous" />
 
   <script
