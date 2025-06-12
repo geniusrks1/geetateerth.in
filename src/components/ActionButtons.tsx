@@ -9,18 +9,18 @@ const ActionButtons: React.FC = () => {
       <a
         href="https://wa.me/7007814974?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20room"
 
-        className="bg-green-500 text-white p-4 rounded-full shadow hover:bg-green-600 flex items-center gap-2"
+        className=" text-black p-4 rounded-full shadow hover:bg-green-600 flex items-center gap-2"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <ChatBubbleLeftIcon className="w-6 h-6" /> WhatsApp
+        <ChatBubbleLeftIcon className="w-6 h-6  " /> 
       </a>
-      <a
+      {/* <a
         href="tel:7007814974"
         className="bg-blue-500 text-white p-4 rounded-full shadow hover:bg-blue-600 flex items-center gap-2"
       >
         <PhoneIcon className="w-6 h-6" /> Call Us
-      </a>
+      </a> */}
     </div>
   );
 };

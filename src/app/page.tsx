@@ -28,10 +28,12 @@ const Home: React.FC = () => {
         <GT_TourAndTravel/>
         <SightseeingSection />
         <TransportSection />
-        <MapSection />
+        
         <ActionButtons /> 
-        <ContactSection/>
+        
         <SacredPlaces/>
+        <MapSection />
+        <ContactSection/>
       </main>
     </div>
     <Footer />
