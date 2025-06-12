@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { PhoneIcon, ChatBubbleLeftIcon } from "@heroicons/react/24/solid";
+import { ChatBubbleLeftIcon } from "@heroicons/react/24/solid";
 
 const ActionButtons: React.FC = () => {
   return (
@@ -15,12 +15,7 @@ const ActionButtons: React.FC = () => {
       >
         <ChatBubbleLeftIcon className="w-6 h-6  " /> 
       </a>
-      {/* <a
-        href="tel:7007814974"
-        className="bg-blue-500 text-white p-4 rounded-full shadow hover:bg-blue-600 flex items-center gap-2"
-      >
-        <PhoneIcon className="w-6 h-6" /> Call Us
-      </a> */}
+     
     </div>
   );
 };
