@@ -114,7 +114,7 @@ const RoomsSection: React.FC = () => {
 
       <div className="max-w-xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-md border border-yellow-200">
         <h3 className="text-2xl font-bold text-center text-orange-700 mb-6">
-          Book Your Stay
+         📝 Book Your Stay
         </h3>
         <div className="space-y-4">
           <div>
@@ -129,7 +129,7 @@ const RoomsSection: React.FC = () => {
           </div>
 
           <div className="text-lg font-semibold text-gray-700">
-            Estimated Total: ₹{totalCost}/night{" "}
+           💰 Estimated Total: ₹{totalCost}/night{" "}
             {extraPersons > 0 && (
               <span className="text-sm text-red-600">
                 (Includes ₹{extraCharge} for {extraPersons} extra person
